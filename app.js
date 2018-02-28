@@ -3,7 +3,6 @@ const bodyParser = require("body-parser"),
       app        = express(),
       port       = 5050;
 
-
 var campgrounds = [
     {
         name: "Yosemite Valley",
@@ -14,12 +13,33 @@ var campgrounds = [
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 
+/* 
+##########################
+         ROUTES
+##########################
+*/
+
 app.get("/", (req, res) => {
     res.render("landing");
 });
 
-app.get("/index", (req, res) => {
+// INDEX route
+app.get("/campgrounds", (req, res) => {
     res.render("index", {campgrounds: campgrounds});
+});
+
+// NEW route - show form for creating new campgrounds
+app.get("/campgrounds/new", (req, res) => {
+    res.render("new");
+});
+
+//CREATE campground
+app.post("/campgrounds", (req, res) => {
+    let name  = req.body.name,
+        image = req.body.image;
+    // push campground in array and redirect
+    campgrounds.push({name: name, image: image});
+    res.redirect("/campgrounds");
 });
 
 app.listen(process.env.PORT || port, () => {
