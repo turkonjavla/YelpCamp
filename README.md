@@ -1,3 +1,3 @@
 #
-# This is a full stack web app built using node.js
+# This is a full stack web app built with node.js
 #
