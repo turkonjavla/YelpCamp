@@ -21,7 +21,7 @@
                         <hr class="my-3">
                         <p><%= campground.description.substring(0, 250) %>...</p> 
                     </div>
-                    <a href="#" class="btn btn-light">More info <i class="fas fa-chevron-right"></i></a>
+                    <a href="/campgrounds/<%= campground._id %>" class="btn btn-light">More info <i class="fas fa-chevron-right"></i></a>
                 </div>
              </div>
          <% }); %>

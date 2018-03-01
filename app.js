@@ -64,7 +64,12 @@ app.post("/campgrounds", (req, res) => {
 // SHOW - shows a specific campground
 app.get("/campgrounds/:id", (req, res) => {
     // find campground with id
-    // render show page
+    Campground.findById(req.params.id)
+        .then(campground => {
+            // render show page
+            res.render("show", {campground: campground});
+        })
+        .catch(error => console.log("There was an error showing the specific campground!" + error));
 });
 
 app.listen(process.env.PORT || port, () => {
