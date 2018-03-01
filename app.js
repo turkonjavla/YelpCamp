@@ -1,7 +1,9 @@
 const bodyParser = require("body-parser"),
+      mongoose   = require("mongoose"),
       express    = require("express"),
       app        = express(),
       port       = 5050;
+
 
 var campgrounds = [
     {
