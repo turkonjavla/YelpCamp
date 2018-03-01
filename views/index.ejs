@@ -19,11 +19,7 @@
                     <div class="card-body">
                         <h5 class="card-title text-center"><%= campground.name %></h5>
                         <hr class="my-3">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Voluptatem, maxime, dolorem veritatis labore
-                        asperiores soluta tempora assumenda esse saepe
-                        accusantium corrupti, nobis ad sequi doloremque fugiat
-                        eveniet laboriosam impedit fugit?</p> 
+                        <p><%= campground.description.substring(0, 250) %>...</p> 
                     </div>
                     <a href="#" class="btn btn-light">More info <i class="fas fa-chevron-right"></i></a>
                 </div>
