@@ -4,6 +4,11 @@ const bodyParser = require("body-parser"),
       app        = express(),
       port       = 5050;
 
+const db = process.env.DATABASEURL;
+
+mongoose.connect(db)
+    .then(() => console.log("MongoDB connected!"))
+    .catch(error => console.log("There was an error connecting to MongoDB"));
 
 var campgrounds = [
     {
