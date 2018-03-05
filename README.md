@@ -1,10 +1,12 @@
 # YelpCamp
 This is a node/express app for campgrounds in the US.
 
+>Check out [YelpCamp](https://still-depths-39460.herokuapp.com/) - old version. New version will be up by the end of the week
+
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
-### Prequisites
+### Prerequisites
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [MongoDB](https://www.mongodb.com/download-center#community)
 - [Node.js](https://nodejs.org/en/)
@@ -21,9 +23,12 @@ git clone https://github.com/turkonjavla/YelpCamp.git
 npm i -S mongoose
          body-parser
          express 
+```
 
+```
 npm i -g nodemon (this will install nodemon globally on your machine)
 ```
+
  Create a .env file in the project root directory and paste the code below:
 ```
 DATABASEURL = mongodb://localhost/yourdbname
