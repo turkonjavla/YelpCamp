@@ -10,12 +10,12 @@ These instructions will get you a copy of the project up and running on your loc
 - [Git](https://git-scm.com/)
 
 ### Installing
-- Navigate to the folder where you wish to place the project.
-- Paste the command below in your VS Code Terminal
+ Navigate to the folder where you wish to place the project.
+ Paste the command below in your VS Code Terminal.
 ```
 git clone https://github.com/turkonjavla/YelpCamp.git
 ```
-- Install the following packages:
+ Install the following packages:
 ```
 npm i -S mongoose
          body-parser
@@ -23,16 +23,16 @@ npm i -S mongoose
 
 npm i -g nodemon (this will install nodemon globally on your machine)
 ```
-- Create a .env file in the project root directory and put the following in it:
+ Create a .env file in the project root directory and put the following in it:
 ```
 DATABASEURL = yourlocaldatabase
 ```
 
 # Task lists
-[] Comments
-[] Admin CP
-[] Sign up/Login
-[] User profile
+[ ] Comments
+[ ] Admin CP
+[ ] Sign up/Login
+[ ] User profile
 
 
 
