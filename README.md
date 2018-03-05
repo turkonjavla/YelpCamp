@@ -5,6 +5,7 @@ This is a node/express app for campgrounds in the US.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prequisites
+- [MongoDB](https://www.mongodb.com/download-center#community)
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Node.js](https://nodejs.org/en/)
 - [Git](https://git-scm.com/)
@@ -23,16 +24,17 @@ npm i -S mongoose
 
 npm i -g nodemon (this will install nodemon globally on your machine)
 ```
- Create a .env file in the project root directory and put the following in it:
+ Create a .env file in the project root directory and paste the code below:
 ```
-DATABASEURL = yourlocaldatabase
+DATABASEURL = mongodb://localhost/yourdbname
 ```
 
 ## Task lists
 - [ ] Comments
 - [ ] Admin CP
-- [ ] Sign up/Login
+- [ ] Sign Up/Login
 - [ ] User profile
+- [ ] 
 
 ## Acknowledgments
 - Colt Steele 
