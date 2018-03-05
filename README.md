@@ -1,7 +1,7 @@
 # YelpCamp
 This is a node/express app for campgrounds in the US.
 
-# Getting Started
+## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prequisites
@@ -28,11 +28,14 @@ npm i -g nodemon (this will install nodemon globally on your machine)
 DATABASEURL = yourlocaldatabase
 ```
 
-# Task lists
-[ ] Comments
-[ ] Admin CP
-[ ] Sign up/Login
-[ ] User profile
+## Task lists
+- [ ] Comments
+- [ ] Admin CP
+- [ ] Sign up/Login
+- [ ] User profile
+
+## Acknowledgments
+- Colt Steele 
 
 
 
