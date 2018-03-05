@@ -21,3 +21,7 @@
     width: 100%; 
     height: 100%;
 }
+
+.md-form.form-sm .prefix~input, .md-form.form-sm .prefix~textarea {
+    overflow-y: auto;
+}
