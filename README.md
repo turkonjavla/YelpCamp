@@ -5,8 +5,8 @@ This is a node/express app for campgrounds in the US.
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prequisites
-- [MongoDB](https://www.mongodb.com/download-center#community)
 - [Visual Studio Code](https://code.visualstudio.com/)
+- [MongoDB](https://www.mongodb.com/download-center#community)
 - [Node.js](https://nodejs.org/en/)
 - [Git](https://git-scm.com/)
 
