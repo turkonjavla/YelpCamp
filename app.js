@@ -19,7 +19,7 @@ var campgroundSchema = new mongoose.Schema({
 
 var Campground = mongoose.model("Campground", campgroundSchema);
 
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/public")); 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 

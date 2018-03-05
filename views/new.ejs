@@ -1,30 +1,47 @@
 <% include partials/header %>
 
-<div class="container" style="margin-top: 80px;">
+<div class="container mb-4 marginTop">
     <div class="row justify-content-center">
         <div class="col-md-6">
-            <div class="card">
-                <h3 class="card-header">Create campground</h3>
-                <div class="card-body">
-                    <form action="/campgrounds" method="post">
-                        <div class="form-group">
+            <form action="/campgrounds" method="post">
+                <!--Content-->
+                <div class="modal-content z-depth-1-half">
+                    <!--Header-->
+                    <div class="modal-header blue-grey darken-1 white-text">
+                        <h4 class="card-text">Create campground</h4>
+                    </div>
+                    <!--Body-->
+                    <div class="modal-body">
+        
+                        <!-- Material input name -->
+                        <div class="md-form form-sm">
+                            <i class="fas fa-tag prefix"></i>
+                            <input type="text" id="name" class="form-control form-control-sm">
                             <label for="name">Name</label>
-                            <input type="text" class="form-control" name="name" placeholder="name" id="name">
                         </div>
-                        <div class="form-group">
-                            <label for="image">Image</label>
-                            <input type="text" class="form-control" name="image" placeholder="image" id="image">
+        
+                        <!-- Material input email -->
+                        <div class="md-form form-sm">
+                            <i class="fa fa-image prefix"></i>
+                            <input type="text" id="image" class="form-control form-control-sm">
+                            <label for="image">Image url</label>
                         </div>
-                        <div class="form-group">
-                            <textarea class="form-control" name="description" cols="30" rows="10" placeholder="Write a descrption"></textarea>
+        
+                        <!-- Material textarea message -->
+                        <div class="md-form form-sm">
+                            <i class="fas fa-pencil-alt prefix"></i>
+                            <textarea rows="5" cols="10" type="text" id="description" class="md-textarea form-control text-area-scroll"></textarea>
+                            <label for="description">Description</label>
                         </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-outline-success">Create</button>
-                            <a class="btn btn-outline-secondary" href="/campgrounds">Back</a>
+        
+                        <div class="text-center mt-4 mb-2">
+                            <button class="btn btn-primary">Send
+                                <i class="fa fa-send ml-2"></i>
+                            </button>
                         </div>
-                    </form>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
