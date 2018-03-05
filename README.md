@@ -34,7 +34,6 @@ DATABASEURL = mongodb://localhost/yourdbname
 - [ ] Admin CP
 - [ ] Sign Up/Login
 - [ ] User profile
-- [ ] 
 
 ## Acknowledgments
 - Colt Steele 
