@@ -7,8 +7,11 @@ const bodyParser = require("body-parser"),
 // Models
 const Campground = require("./models/campground");
 
+// Seeds file
+const seedDB = require("./seeds");
 const db = process.env.DATABASEURL; // stored in .env file
 
+ seedDB();
 mongoose.connect(db)
     .then(() => console.log("MongoDB connected!"))
     .catch(error => console.log("There was an error connecting to MongoDB"));
@@ -47,19 +50,25 @@ app.post("/campgrounds", (req, res) => {
         image       = req.body.image,
         description = req.body.description,
         campgrounds = {name: name, image: image, description: description}
+
     // Create camprgound and save to DB
     Campground.create(campgrounds)
         .then(campground => {
             res.redirect("/campgrounds");
             console.log(campground);
         })
-        .catch(error => console.log("there was an error while adding new campground!"));
+        .catch(error => {
+            console.log("Error message: " + error);
+            res.redirect("/campgrounds/new");
+        });
 });
 
 // SHOW - shows a specific campground
 app.get("/campgrounds/:id", (req, res) => {
     // find campground with id
-    Campground.findById(req.params.id)
+    let id = req.params.id;
+
+    Campground.findById(id).populate("comments").exec()
         .then(campground => {
             // render show page
             res.render("show", {campground: campground});

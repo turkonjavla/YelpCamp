@@ -1,6 +1,7 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose"),
+      Commnet  = require("./comment");
 
-let CampgroundSchema = mongoose.Schema({
+const CampgroundSchema = mongoose.Schema({
     name: {
         type: String,
         required: true
@@ -9,7 +10,13 @@ let CampgroundSchema = mongoose.Schema({
     description: {
         type: String,
         required: true
-    }
+    },
+    comments: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: "Comment"
+        }
+    ]
 });
 
 module.exports = mongoose.model("Campground", CampgroundSchema);
