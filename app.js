@@ -4,20 +4,14 @@ const bodyParser = require("body-parser"),
       app        = express(),
       port       = 5050;
 
+// Models
+const Campground = require("./models/campground");
+
 const db = process.env.DATABASEURL; // stored in .env file
 
 mongoose.connect(db)
     .then(() => console.log("MongoDB connected!"))
     .catch(error => console.log("There was an error connecting to MongoDB"));
-
-// campground schema
-var campgroundSchema = new mongoose.Schema({
-    name: String,
-    image: String,
-    description: String
-});
-
-var Campground = mongoose.model("Campground", campgroundSchema);
 
 app.use(express.static(__dirname + "/public")); 
 app.use(bodyParser.urlencoded({extended: true}));
