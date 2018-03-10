@@ -38,14 +38,14 @@ app.get("/", (req, res) => {
 app.get("/campgrounds", (req, res) => {
     Campground.find({})
         .then(campgrounds => {
-            res.render("index", {campgrounds: campgrounds});
+            res.render("campgrounds/index", {campgrounds: campgrounds});
         })
         .catch(error => console.log("There was an error displaying campgrounds!"));
 });
 
 // NEW route - show form for creating new campgrounds
 app.get("/campgrounds/new", (req, res) => {
-    res.render("new");
+    res.render("campgrounds/new");
 });
 
 //CREATE campground
@@ -75,10 +75,20 @@ app.get("/campgrounds/:id", (req, res) => {
     Campground.findById(id).populate("comments").exec()
         .then(campground => {
             // render show page
-            res.render("show", {campground: campground});
+            res.render("campgrounds/show", {campground: campground});
         })
         .catch(error => console.log("There was an error showing the specific campground!" + error));
 });
+
+/* 
+######################
+       COMMENTS
+######################
+*/
+
+app.post("/campgrounds/:id/comments", (req, res) => {
+    res.send("POST");
+}); 
 
 app.listen(process.env.PORT || port, () => {
     console.log(`Server started at port ${port}`);
