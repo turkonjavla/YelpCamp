@@ -1,6 +1,7 @@
 const bodyParser = require("body-parser"),
       mongoose   = require("mongoose"),
       express    = require("express"),
+      moment     = require("moment"),
       app        = express(),
       port       = 5050;
 
@@ -19,6 +20,9 @@ mongoose.connect(db)
 app.use(express.static(__dirname + "/public")); 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
+
+// Add moment js
+app.locals.moment = moment;
 
 /* 
 ##########################

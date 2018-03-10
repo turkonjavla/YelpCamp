@@ -22,6 +22,7 @@
                         <h4 class="card-title text-center py-2">
                             <strong><%= campground.name %></strong>
                         </h4>
+                        <p class="text-muted text-center">Date created: <%= moment(campground.createdAt).format("MMMM Do YYYY") %></p>
                         <p class="text-center">
                             <a class="amber-text mr-3 waves-effect" href=""><i class="fas fa-edit"></i> Edit</a>
                             <a class="red-text waves-effect" href=""><i class="fas fa-times"></i> Remove</a>
@@ -51,7 +52,7 @@
                             <!--Brief-->
                             <div class="brief">
                                 <a class="name"><strong><%= comment.author %></strong></a>
-                                <div class="date"><strong>1 hour ago</strong></div>
+                                <div class="date"><strong><%= moment(comment.createdAt).fromNow() %></strong></div>
                             </div>
                             <div class="added-text "><%= comment.text %></div>
                     <% }); %>
